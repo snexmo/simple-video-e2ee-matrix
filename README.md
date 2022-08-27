@@ -26,4 +26,6 @@ Read https://matrix.org/docs/guides/end-to-end-encryption-implementation-guide f
 
 This is a very simple, basic, application, do not expect fancy eyecandy
 
+## Notes on olm library
+- The files olm.js, olm.wasm and olm.d.ts are included to facilitate the application usage. They are built from https://gitlab.matrix.org/matrix-org/olm.git, release 3.2.12
 
