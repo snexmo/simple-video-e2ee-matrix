@@ -24,4 +24,6 @@ Read https://matrix.org/docs/guides/end-to-end-encryption-implementation-guide f
 - On the other tabs, click "Connect and only subscribe" to join the session and subscribe. Check the console to see the E2E secret changes and messages exchanged
 - Closing already connected tabs will simulate disconnections
 
+This is a very simple, basic, application, do not expect fancy eyecandy
+
 
