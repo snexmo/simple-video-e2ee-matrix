@@ -1,3 +1,4 @@
+# DO NOT USE THIS CODE AS IT IS FOR SECURITY SENSITIVE USE CASES
 # simple-video-e2ee-matrix
 Video end-to-end encryption keys negotiated among the clients using olm/megolm protocol. The application or Vonage video plataform do not take part in the key agreement or rotation.
 - Every time a connection is created, every client establishes a 1-1 olm session with the new connection's client. The 1-1 olm sessions allow exchanging of peer-to-peer encrypted messages over unsecure channels. OpenTok signal() is used in this example
