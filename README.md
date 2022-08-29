@@ -11,8 +11,9 @@ Video end-to-end encryption keys negotiated among the clients using olm/megolm p
 - All messages are signed to verify the sending client against the public key information exchanged when the 1-1 olm session is established. This is compared against the connectionId but could also be compared against other identification if desired
 
 Caveats:
-- This is a very simple application, assumed to have only one publisher, the "lead" client is the publisher. In production, if the same scheme is to be used, the application would need to designate the "lead" client, based on business logic or use case.
-- If the "lead" client disconnects, either a new "lead" client needs to be selected and existing session recovered, or the session must restart with the new "leader".
+- The approach fits more naturally a per-stream e2e secret, with the publisher "leading" key establishment and rotation for their published streams.
+It can be used for the current per session e2e secret, with the application electing a "lead" client bootstrapping the key establishment and rotation. This is what the example does.
+- If the "lead" client disconnects, either a new "lead" client needs to be selected and existing session recovered, or the session must restart with the new "leader". This is currently a TODO.
 
 Read https://matrix.org/docs/guides/end-to-end-encryption-implementation-guide for further reference
 
