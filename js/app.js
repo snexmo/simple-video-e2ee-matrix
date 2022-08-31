@@ -409,7 +409,7 @@ function startSession(startPublishing) {
         // group message recipients will change the OT session E2E secret to the received group session key value
         // FOR_PRODUCTION: this should be done by the "lead" client
         // note: sending this will change the encryption key used for the next group message
-      sendOlmGroup(olmOutboundGroupSession, "PING GROUP !!!", session);
+        sendOlmGroup(olmOutboundGroupSession, "PING GROUP !!!", session);
       }
       // end of olm
     },
