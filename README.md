@@ -13,6 +13,7 @@ Video end-to-end encryption keys negotiated among the clients using olm/megolm p
 Caveats:
 - The approach fits more naturally a per-stream e2e secret, with the publisher "leading" key establishment and rotation for their published streams.
 It can be used for the current per session e2e secret, with the application electing a "lead" client bootstrapping the key establishment and rotation. This is what the example does.
+- The message index should be checked for every message received from a group session. This is currently a TODO.
 - If the "lead" client disconnects, either a new "lead" client needs to be selected and existing session recovered, or the session must restart with the new "leader". This is currently a TODO.
 
 Read https://matrix.org/docs/guides/end-to-end-encryption-implementation-guide for further reference
